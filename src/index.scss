@@ -1,0 +1,122 @@
+$button-remove-background-color: #ea4c89;
+$button-text-color: #ffffff;
+$button-remove-color-hover: #f082ac;
+$button-add: #4286f4;
+$button-add-hover: #8eb7f8;
+
+@font-face {
+  font-family: "Open Sans";
+  src: "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap";
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #00539cff;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.btn-enviar {
+  background-color: $button-add;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: $button-text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  margin-left: 15px;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  &:hover,
+  &:focus {
+    background-color: $button-add-hover;
+  }
+}
+
+.div-todo {
+  border-radius: 20px;
+  border: 2px solid red;
+  padding: 1rem;
+  border-color: #00539cff;
+}
+
+form {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  align-items: baseline;
+  padding: 1rem;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #808080;
+  height: 27px;
+  &:focus {
+    border-color: $button-add;
+  }
+  color: #00539cff;
+}
+
+.btn-remover {
+  @extend .btn-enviar;
+  margin-left: 15px;
+  background-color: $button-remove-background-color;
+  &:hover {
+    background-color: $button-remove-color-hover;
+  }
+}
+
+ul {
+  padding-inline-start: 0;
+  li {
+    list-style: none;
+  }
+
+  div {
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0 2px;
+    li {
+      word-break: break-all;
+      text-align: center;
+      max-width: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
